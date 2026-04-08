@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
-  MapPin, Navigation, Compass, Search, Hospital, Building2, 
+  MapPin, Navigation, Compass, Search, Building2, 
   ExternalLink, Loader2, ChevronRight, Info, Layers, CloudOff,
   Phone, LayoutGrid, Map as MapIcon
 } from 'lucide-react';
