@@ -1,9 +1,4 @@
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "start": "vite preview"
-}
+
 {
   "name": "seva-setu-monorepo",
   "version": "1.0.0",
