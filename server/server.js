@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -16,9 +17,18 @@ app.use("/api/patients", patientRoutes);
 app.use("/api/visits", visitRoutes);
 
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
 // ---------------- ROOT ----------------
-app.get("/", (req, res) => {
+app.get("/api/status", (req, res) => {
   res.send("ASHA Health Records API is running ✅");
+});
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 // // ---------------- DEMO DB ----------------
