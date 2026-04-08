@@ -1,0 +1,23 @@
+services:
+  # Backend API
+  - type: web
+    name: seva-setu-backend
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: MONGO_URI
+        sync: false # Manually set this in Render Dashboard for security
+
+  # Frontend Application
+  - type: static
+    name: seva-setu-frontend
+    env: static
+    plan: free
+    rootDir: client
+    buildCommand: npm install && npm run build
+    publishPath: dist
