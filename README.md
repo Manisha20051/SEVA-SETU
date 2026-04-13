@@ -15,3 +15,4 @@ The platform allows users to register, access services, and raise requests بس�
 💻 Tech Stack
 Frontend: React.js
 Backend: Node.js / Express.js
+live at: https://seva-setu-1.onrender.com
